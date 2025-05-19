@@ -1,0 +1,134 @@
+.ImageCard {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  align-self: start;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  break-inside: avoid;
+  margin-bottom: 1.5rem;
+}
+
+.ImageCard:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.ImageWrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1.5rem;
+}
+
+.ImageWrapper img.Image {
+  width: 100%;
+  display: block;
+  border-radius: 1.5rem;
+  object-fit: cover;
+}
+
+.ImageOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+  display: none;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.ImageWrapper:hover .ImageOverlay {
+  display: block;
+}
+
+.OverlayTop {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 2;
+}
+
+.OverlayIcon {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background-color: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.OverlayIcon img {
+  width: 16px;
+  height: 16px;
+}
+
+.VisitButton {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.AuthorInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.5rem 1rem 1rem;
+  font-family: 'Inter', sans-serif;
+  background-color: white;
+  border-bottom-left-radius: 1.5rem;
+  border-bottom-right-radius: 1.5rem;
+}
+
+.AuthorAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid limegreen;
+  margin-top: -24px;
+  background-color: white;
+  z-index: 2;
+}
+
+.AuthorName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #111;
+  margin: 0;
+}
+
+.AuthorDate {
+  font-size: 0.75rem;
+  color: #444;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.AuthorDate img {
+  width: 14px;
+  height: 14px;
+}
+
+
+
+

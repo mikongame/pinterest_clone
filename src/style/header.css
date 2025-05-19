@@ -1,0 +1,71 @@
+.Header {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 10px 18px;
+  gap: 18px;
+  width: 100%;
+  background-color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.Logo {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.NavButtons {
+  display: flex;
+  gap: 10px;
+  height: 50px;
+}
+
+.NavButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  border-radius: 30px;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  color: #000;
+  background: transparent;
+  cursor: pointer;
+}
+
+.NavButton.Filled {
+  background-color: #000;
+  color: #fff;
+}
+
+.SearchContainer {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+}
+
+.Icon {
+  width: 35px;
+  height: 40px;
+  object-fit: contain;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.Profile {
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #E5E5E5;
+  color: #757575;
+  font-size: 24px;
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}

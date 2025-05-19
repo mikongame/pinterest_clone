@@ -1,0 +1,147 @@
+@media screen and (max-width: 768px) {
+  .Header {
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    gap: 12px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    z-index: 10;
+  }
+
+  .NavButtons,
+  .BellIcon,
+  .CommentIcon {
+    display: none;
+  }
+
+  .Logo {
+    width: 30px;
+    height: 30px;
+  }
+
+  .SearchBar {
+    width: 100%;
+  }
+
+  .SearchContainer {
+    width: 100%;
+    flex-grow: 1;
+    margin: 0 10px;
+    order: 1;
+  }
+
+  .SearchBar {
+    height: 36px;
+  }
+
+  .SearchInput {
+    padding: 8px 12px;
+    font-size: 1.1rem;
+  }
+
+  .SearchButton img {
+    width: 16px;
+    height: 16px;
+  }
+  
+
+  .Profile {
+    font-size: 1rem;
+    order: 2;
+  }
+
+  .Gallery {
+    column-count: 2;
+    column-gap: 1rem;
+    padding: 1rem;
+    margin-top: 60px;
+  }
+
+  .ImageCard {
+    margin-bottom: 1rem;
+  }
+
+  .AuthorAvatar {
+    width: 42px;
+    height: 42px;
+    margin-top: -20px;
+  }
+
+  .AuthorName {
+    font-size: 0.9rem;
+  }
+
+  .AuthorDate {
+    font-size: 0.7rem;
+  }
+
+  .VisitButton {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .OverlayIcon {
+    font-size: 0.7rem;
+    padding: 4px 8px;
+  }
+
+  .OverlayIcon img {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+
+@media screen and (min-width: 769px) and (max-width: 1180px) {
+  .Header {
+    padding: 14px 24px;
+    gap: 16px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .NavButton {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+  }
+
+  .Profile,
+  .BellIcon,
+  .CommentIcon {
+    order: 2;
+  }
+
+  .SearchContainer {
+    flex-grow: 1;
+    width: 100%;
+    order: 3;
+  }
+
+  .SearchBar {
+    width: 100%;
+  }
+
+  .Gallery {
+    column-count: 3;
+    column-gap: 1.2rem;
+    margin-top: 120px;
+    padding: 1.5rem;
+  }
+
+  .AuthorAvatar {
+    width: 46px;
+    height: 46px;
+    margin-top: -22px;
+  }
+
+  .VisitButton {
+    font-size: 0.9rem;
+    padding: 7px 14px;
+  }
+}
