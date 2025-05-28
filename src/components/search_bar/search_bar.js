@@ -1,4 +1,5 @@
-import searchIcon from '../assets/search.png';
+import searchIcon from '../../assets/search.png';
+import './search_bar.css';
 
 export function createSearchBar(onSearch) {
   const form = document.createElement('form');

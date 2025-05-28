@@ -1,21 +1,22 @@
 import './style/style.css';
-import './style/header.css';
-import './style/search_bar.css';
-import './style/gallery.css';
-import './style/image_card.css';
-import './style/error_message.css';
 import './style/responsive.css';
 
-import { createHeader } from './components/header.js';
-import { createGallery } from './components/gallery.js';
-import { createErrorMessage } from './components/error_message.js';
+import { createHeader } from './components/header/header.js';
+import { createErrorMessage } from './components/error/error_message.js';
+import { createGallery } from './components/gallery/gallery.js';
 import { searchImages } from './utils/api.js';
 
 let gallery;
 let errorMessage;
 
+const FIRST_QUERY_KEY = 'first_query';
+
+if (localStorage.getItem(FIRST_QUERY_KEY) === 'gatos') {
+  localStorage.removeItem(FIRST_QUERY_KEY);
+}
+
 async function renderImages(query) {
-  errorMessage.hide(); // Ocultar errores anteriores
+  errorMessage.hide();
 
   try {
     const images = await searchImages(query);
@@ -36,18 +37,26 @@ document.addEventListener('DOMContentLoaded', () => {
   const app = document.querySelector('#app');
   app.innerHTML = '';
 
-  // Header
-  const header = createHeader(renderImages, () => renderImages('gatos'));
+  const header = createHeader((query) => {
+    const alreadyStored = localStorage.getItem(FIRST_QUERY_KEY);
+
+    if (!alreadyStored && query !== 'gatos') {
+      localStorage.setItem(FIRST_QUERY_KEY, query);
+    }
+
+    renderImages(query);
+  }, () => {
+    const savedQuery = localStorage.getItem(FIRST_QUERY_KEY);
+    renderImages(savedQuery || 'gatos');
+  });
+
   app.appendChild(header);
 
-  // Galería
-  gallery = createGallery();
-  app.appendChild(gallery.getElement());
-
-  // Mensajes de error
   errorMessage = createErrorMessage();
   app.appendChild(errorMessage.element);
 
-  // Búsqueda inicial
+  gallery = createGallery();
+  app.appendChild(gallery.getElement());
+
   renderImages('gatos');
 });

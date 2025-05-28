@@ -1,5 +1,5 @@
 #Clave oculta
-.env
+*.env
 # Logs
 logs
 *.log

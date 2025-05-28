@@ -1,6 +1,7 @@
-import cameraIcon from '../assets/camera.png';
-import heartIcon from '../assets/like.png';
-import shareIcon from '../assets/share.png';
+import cameraIcon from '../../assets/camera.png';
+import heartIcon from '../../assets/like.png';
+import shareIcon from '../../assets/share.png';
+import './image_card.css';
 
 export function createImageCard(image) {
   const card = document.createElement('li');

@@ -1,3 +1,5 @@
+import './error_message.css';
+
 export function createErrorMessage() {
   const container = document.createElement('div');
   container.classList.add('ErrorMessage');

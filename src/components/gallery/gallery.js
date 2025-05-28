@@ -1,4 +1,5 @@
-import { createImageCard } from './image_card.js';
+import { createImageCard } from '../image_card/image_card.js';
+import './gallery.css';
 
 export function createGallery() {
   const container = document.createElement('section');
